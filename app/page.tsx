@@ -65,12 +65,12 @@ export default function Home() {
           <h2 className="text-2xl font-semibold mb-4">Uploaded Videos</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {videos.length === 0 && <p>No videos yet.</p>}
-            {videos.map((video) => (
-              <div key={video.id} className="aspect-video border rounded-lg overflow-hidden">
-                <MuxPlayer
-                  playbackId={video.playbackId}
-                  streamType="on-demand"
-                  controls
+            {(videos as { id: string; playbackId: string }[]).map((video) => (
+            <div key={video.id} className="aspect-video border rounded-lg overflow-hidden">
+              <MuxPlayer
+                playbackId={video.playbackId}
+                            streamType="on-demand"
+                  //controls
                   style={{ width: '100%', height: '100%' }}
                 />
               </div>
