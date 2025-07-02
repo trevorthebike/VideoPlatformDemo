@@ -16,7 +16,8 @@
     "next": "15.3.4",
     "next-video": "^2.2.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "supabase": "^2.30.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
